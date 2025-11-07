@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     cout << "Hey i am Pratap";
-    cout << endl;
+    cout << endl; // this is add for new line 
     cout << endl;
     cout << "This is my second line";
 }
