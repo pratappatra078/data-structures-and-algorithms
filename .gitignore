@@ -1,0 +1,10 @@
+*.exe
+*.pdf
+*.mp4
+Questions - MCQ/
+# Build files
+*.o
+*.out
+
+# VS Code settings
+.vscode/
