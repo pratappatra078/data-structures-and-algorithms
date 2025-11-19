@@ -114,19 +114,105 @@ public:
         }
         return true;
     }
+    void deleteSameNeighbors(){
+        Node* currptr = tail->prev;
+        while(currptr->prev!=head){
+            Node* nextptr = currptr->next;
+            Node* prevptr = currptr->prev;
+            if(prevptr->val == nextptr->val){
+                prevptr->next = nextptr;
+                nextptr->prev=prevptr;
+                currptr = prevptr;
+            }
+            currptr = prevptr;
+        }
+    }
+    
 };
+// 
+bool currNodeisCriticalPoint(Node* &currNode){
+    if(currNode->prev->val > currNode->val && currNode->val < currNode->next->val) return true;
+    if(currNode->prev->val < currNode->val && currNode->val > currNode->next->val) return true;
+    return false;
+}
+
+vector<int> distanceBetweenTwoPoint(Node* head,Node* tail){
+    vector<int> ans(2,INT_MAX);
+    int firstCP = -1,lastCP = -1;
+    Node* currNode = tail->prev ;
+    // if empty
+    if(currNode== NULL){
+        ans[0]=ans[1]=-1;
+        return ans;
+    }
+
+    //
+    int currPos = 0;
+    while(currNode->prev != NULL){
+        if(currNodeisCriticalPoint(currNode)){
+            if(firstCP == -1){
+                firstCP = lastCP = currPos;
+            }
+            else{
+                ans[0] =min(ans[0],currPos - lastCP); // min distance     
+                ans[1] = currPos - firstCP; // max distance 
+                lastCP = currPos;
+            }
+
+        }
+        currPos++;
+        currNode = currNode -> prev;
+    }
+
+    if (ans[0]==INT_MAX){
+        ans[0]=ans[1]= -1;
+    }
+    return ans;
+
+}
+vector<int> findPair(Node* head,Node* tail,int target){
+    // assuming that node is not empty 
+    Node* firstptr= head;
+    Node* lastptr = tail;
+    // answer vector 
+    vector<int> ans(2,INT_MAX);
+    // stop loop when cross one point another
+    while(firstptr != lastptr){
+        // if sum is equal to target 
+        if((firstptr->val + lastptr->val) ==target){
+            ans[0] = firstptr->val;
+            ans[1]=lastptr->val;
+            return ans;
+        }
+        // when sum is less than target
+        else if((firstptr->val + lastptr->val) < target){
+            firstptr = firstptr->next;
+        }
+        // when sum is greater than target
+        else{
+            lastptr=lastptr->prev;
+        }
+    }
+    // if not found pair 
+    if(ans[0]==INT_MAX){
+        ans[0]=ans[1]=-1;
+    }
+    return ans;
+}
+
 int main()
 {
-    // code here
     DoubleLinkedlist dll;
+
+    dll.insertAtEnd(2);
+    dll.insertAtEnd(5);
+    dll.insertAtEnd(6);
+    dll.insertAtEnd(8);
     dll.insertAtEnd(10);
-    dll.insertAtEnd(20);
-    dll.insertAtEnd(30);
-    dll.insertAtEnd(40);
-    dll.insertAtEnd(40);
-    dll.insertAtEnd(30);
-    dll.insertAtEnd(20);
-    dll.insertAtEnd(10);
+    dll.insertAtEnd(13);
+    dll.insertAtEnd(19);
+    dll.insertAtEnd(23);
+
     dll.display();
 
     // insert 60 at 2nd position
@@ -141,6 +227,16 @@ int main()
     // dll.reverseDll();
     // dll.display();
 
-    (dll.checkPalindrome()) ? cout<<"It is Palindrome " : cout <<"No,Its not palindrome";
+    // (dll.checkPalindrome()) ? cout<<"It is Palindrome " : cout <<"No,Its not palindrome";
+
+    // dll.deleteSameNeighbors();
+    // dll.display();
+
+    // vector<int> ans = distanceBetweenTwoPoint(dll.head,dll.tail);
+    // cout <<ans[0]<< " "<<ans[1]<<endl;
+
+    vector<int> pair = findPair(dll.head,dll.tail,31);
+    cout << pair[0]<<" "<<pair[1]<<endl;
+
     return 0;
 }
