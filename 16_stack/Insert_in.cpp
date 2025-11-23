@@ -31,7 +31,7 @@ void insert_at_bottom_recursive(stack<int>&st,stack<int>&result,int  val){
 void insert_at_idx(stack<int>&st,int val,int idx){
     stack<int> temp;
     int cnt = 0;
-    while(cnt != st.size()-idx +1){
+    while(cnt != st.size()-idx ){
         int curr = st.top();
         st.pop();
         temp.push(curr);
