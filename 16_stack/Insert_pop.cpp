@@ -63,30 +63,57 @@ void insert_at_idx_recursive(stack<int> &st, int val, int idx, int cnt)
     insert_at_idx_recursive(st, val, idx, cnt++);
     st.push(curr);
 }
-void delete_from_bottom(stack<int>&st){
-    int cnt = 0;
-    stack<int>temp;
-    while(cnt != st.size() -1){
+void delete_from_bottom(stack<int> &st)
+{
+    stack<int> temp;
+    while (st.size() != 1)
+    {
         int curr = st.top();
         temp.push(curr);
         st.pop();
     }
     st.pop();
-    while(not temp.empty()){
+    while (not temp.empty())
+    {
         int curr = temp.top();
         st.push(curr);
         temp.pop();
     }
 }
-void delete_from_bottom_recursive(stack<int>&st,int cnt){
-    if(cnt == st.size()-1){
+void delete_from_bottom_recursive(stack<int> &st)
+{
+    if (st.size() == 1)
+    {
         st.pop();
         return;
     }
     int curr = st.top();
     st.pop();
 
-    delete_from_bottom_recursive(st,cnt++);
+    delete_from_bottom_recursive(st);
+    st.push(curr);
+}
+void delete_at_any_index(stack<int>&st,int idx){
+    stack<int>temp;
+    while(st.size()!=idx){
+        int curr = st.top();
+        st.pop();
+        temp.push(curr);
+    }st.pop();
+    while(not temp.empty()){
+        int curr = temp.top();
+        st.push(curr);
+        temp.pop();
+    }
+}
+void delete_at_any_index_recursive(stack<int>&st,int idx){
+    if(st.size()==idx){
+        st.pop();
+        return;
+    }
+    int curr = st.top();
+    st.pop();
+    delete_at_any_index_recursive(st,idx);
     st.push(curr);
 }
 int main()
@@ -96,7 +123,7 @@ int main()
     st.push(2);
     st.push(3);
     st.push(4);
-    delete_from_bottom_recursive(st,0);
+    delete_at_any_index_recursive(st,2);
 
     while (not st.empty())
     {
