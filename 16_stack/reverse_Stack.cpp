@@ -1,5 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+/*
+Time Complexity: O(n)
+space complexity: O(n)
+*/
 void reverse(stack<int>&st){
     stack<int>temp1;
     while(not st.empty()){
@@ -19,6 +23,31 @@ void reverse(stack<int>&st){
         st.push(curr);
     }
 }
+/*
+Time Complexity: O(n^2)
+space complexity: O(n^2)
+*/
+
+void insert_bottom(stack<int>&st,int val){
+    if(st.size()==0){
+        st.push(val);
+        return;
+    }
+    int curr = st.top();
+    st.pop();
+    insert_bottom(st,val);
+    st.push(curr);
+}
+
+void reverse_recursive(stack<int>&st){
+    if(st.size()==1){
+        return;
+    }
+    int curr = st.top();
+    st.pop();
+    reverse_recursive(st);
+    insert_bottom(st,curr);
+}
 int main() {
     // code here
     stack<int> st;
@@ -26,7 +55,7 @@ int main() {
     st.push(2);
     st.push(3);
     st.push(4);
-    reverse(st);
+    reverse_recursive(st);
 
     while(not st.empty()){
         cout<<st.top()<<endl;
