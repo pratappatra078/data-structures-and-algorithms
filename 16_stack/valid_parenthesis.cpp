@@ -19,7 +19,7 @@ bool check_parenthesis(string s){
             else return false;
         }
     }
-    return true;
+    return st.empty();
 }
 int main() {
     // code here
