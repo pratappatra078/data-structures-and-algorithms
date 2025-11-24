@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 bool check_parenthesis(string s){
     stack<char>st;
     for(int i =0;i<s.size();i++){
