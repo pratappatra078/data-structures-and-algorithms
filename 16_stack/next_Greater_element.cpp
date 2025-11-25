@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <stack>
 using namespace std;
 
 
@@ -20,7 +22,7 @@ vector<int> next_greater_element(vector<int>v){
 
 //optimised by stack
 // TC: O(n) SC: O(n)
-vector<int> next_greater_element_optimised(vector<int>v){
+vector<int> next_greater_element_optimised(const vector<int>&v){
     int n = v.size();
     vector<int> ans(n,-1);
     //
@@ -37,11 +39,30 @@ vector<int> next_greater_element_optimised(vector<int>v){
     }
     return ans;
 }
+// next smaller element 
+vector<int> next_smaller_element_optimised(const  vector<int>&v){
+    int n = v.size();
+    vector<int> ans(n,-1);
+    //
+    stack<int> st;
+    // store first
+    st.push(0);
+    // second  to last
+    for(int i=1;i<v.size();i++){
+        while(not st.empty() && v[i] < v[st.top()]){
+            ans[st.top()] = v[i];
+            st.pop();
+        }
+        st.push(i);
+    }
+    return ans;
+}
 int main(){
     int n ;
     cout<<"Enter the size of the vector: ";
     cin>>n;
     vector<int> v;
+    v.reserve(n);
     cout<<"Enter the elements of the vector: ";
     while(n--){
         int x;
