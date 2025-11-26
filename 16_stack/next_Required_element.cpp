@@ -128,35 +128,8 @@ vector<int> previous_greater_element_optimised( vector<int> &v)
     }
     return ans;
 }
-vector<int> span_of_stock(vector<int> &v)
-{
-    // reverse the array
-    reverse(v.begin(), v.end());
 
-    // calculate the size of array
-    int n = v.size();
 
-    // create an answer vector of n size with initialise all value by -1
-    vector<int> ans(n, 1);
-
-    // create a stack size st
-    stack<int> st;
-
-    // store first index
-    st.push(0);
-
-    // second  to last
-    for (int i = 1; i < v.size(); i++)
-    {
-        while (not st.empty() && v[i] > v[st.top()])
-        {
-            ans[st.top()] = v[i];
-            st.pop();
-        }
-        st.push(i);
-    }
-    return ans;
-}
 int main()
 {
     int n;
@@ -171,7 +144,7 @@ int main()
         cin >> x;
         v.push_back(x);
     }
-    vector<int> ans = span_of_stock(v);
+    vector<int> ans = previous_greater_element_optimised(v);
 
     // reverse print
     // for (auto s = ans.rbegin(); s != ans.rend(); ++s)
