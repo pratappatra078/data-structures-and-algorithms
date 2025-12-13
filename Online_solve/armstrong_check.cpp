@@ -30,7 +30,5 @@ int main()
         if (obj.isArmstrong(i))
             cout << i << " -> " << "Armstrong" << endl;
     }
-
-    // code here
     return 0;
 }
