@@ -116,18 +116,6 @@ void print8(int n){
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
 int main() {
     
     int t =5;
