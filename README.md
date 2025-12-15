@@ -30,6 +30,9 @@ This repo is divided into folders based on DSA topics for easy navigation and re
 | `13_Hash_Map` | unordered_map, map usage |
 | `14_OOPS` | Classes, objects, constructors, OOP pillars |
 | `15_LinkList` | Linked List operations and problems |
+| `16_Stack` | stack operations and problems |
+| `15_Queue` | queue operations and problems |
+| `15_Dequeue` | Dequeue operations and problems |
 | `Notes` | Theory notes for quick revision |
 | `Online_solve` | Practice problems solved from platforms |
 
