@@ -31,8 +31,8 @@ This repo is divided into folders based on DSA topics for easy navigation and re
 | `14_OOPS` | Classes, objects, constructors, OOP pillars |
 | `15_LinkList` | Linked List operations and problems |
 | `16_Stack` | stack operations and problems |
-| `15_Queue` | queue operations and problems |
-| `15_Dequeue` | Dequeue operations and problems |
+| `17_Queue` | queue operations and problems |
+| `18_Dequeue` | Dequeue operations and problems |
 | `Notes` | Theory notes for quick revision |
 | `Online_solve` | Practice problems solved from platforms |
 
