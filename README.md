@@ -1,77 +1,150 @@
 <div align="center">
 
-# 🚀 DSA in C++ – My Learning Journey
+# 📚 Data Structures & Algorithms (DSA)
 
-A structured and consistent journey to master **Data Structures & Algorithms using C++**.  
-This repository contains topic-wise notes, practice code, challenges, and revision material to strengthen problem-solving skills.
+This repository contins my complete **Data Structure and Algorithm** practice,organized **topic-wise**,**difficulty-wise**,and **pattern-wise** from **basic to advanced**
 
 </div>
 
 ---
 
+## Language Used: **C++**
+## Purpose : **Strong Foundation + Interview preparation**
+
+##  🧭 Learning Order :
+1. Basic & Mathematics
+2. Array & Strings
+3. Reusion & Searching 
+4. Sorting & Hasing 
+5. Linked List,Stack,Queue
+6. Two Pointer & Sliding Window
+7. Greedy & Backtracking
+8. Tree & BST
+9. Heap & Graph
+10. Dynamic Programming
+11. Advance Topic( Trie,Bit,etc.)
+
 ## 📂 Repository Structure
 
-This repo is divided into folders based on DSA topics for easy navigation and revision.
-
-| Folder | Topics Covered |
-|--------|-----------------|
-| `01_Basics & Operators` | C++ basics, variables, operators |
-| `02_Conditional operators` | if-else, switch, conditional logic |
-| `03_Loops` | for, while, do-while, patterns |
-| `04_Pattern Printing` | Number, star & logic pattern questions |
-| `05_Functions` | Functions, parameters, return, scope |
-| `06_Pointers` | Pointer basics, pointer arithmetic |
-| `07_Recursion` | Recursive functions, backtracking intro |
-| `08_Arrays` | 1D & 2D arrays, operations, problems |
-| `09_2D Array` | Matrix operations + problems |
-| `10_String` | String functions & problems |
-| `11_Vector` | STL vector usage & problems |
-| `12_2D_vector` | Vector of vectors |
-| `13_Hash_Map` | unordered_map, map usage |
-| `14_OOPS` | Classes, objects, constructors, OOP pillars |
-| `15_LinkList` | Linked List operations and problems |
-| `16_Stack` | stack operations and problems |
-| `17_Queue` | queue operations and problems |
-| `18_Dequeue` | Dequeue operations and problems |
-| `Notes` | Theory notes for quick revision |
-| `Online_solve` | Practice problems solved from platforms |
-
-> ✨ The goal: Learn → Implement → Practice → Revise
-
+DSA/
+├── 00_Basics/
+│ ├── time_complexity.md
+│ ├── space_complexity.md
+│ └── input_output.c
+│
+├── 01_Mathematics/
+│ ├── count_digits.c
+│ ├── gcd_lcm.c
+│ ├── prime_check.c
+│ └── fast_exponentiation.c
+│
+├── 02_Arrays/
+│ ├── easy/
+│ │ ├── largest_element.c
+│ │ ├── second_largest.c
+│ │ └── reverse_array.c
+│ ├── medium/
+│ │ ├── kadane_algorithm.c
+│ │ └── majority_element.c
+│ └── hard/
+│ └── max_product_subarray.c
+│
+├── 03_Strings/
+│ ├── easy/
+│ │ ├── valid_palindrome.c
+│ │ └── anagram.c
+│ ├── medium/
+│ │ └── longest_substring.c
+│ └── hard/
+│ └── pattern_matching.c
+│
+├── 04_Recursion/
+│ ├── factorial.c
+│ ├── fibonacci.c
+│ └── subset_generation.c
+│
+├── 05_Searching/
+│ ├── linear_search.c
+│ ├── binary_search.c
+│ └── search_rotated_array.c
+│
+├── 06_Sorting/
+│ ├── bubble_sort.c
+│ ├── insertion_sort.c
+│ ├── merge_sort.c
+│ └── quick_sort.c
+│
+├── 07_Linked_List/
+│ ├── singly/
+│ ├── doubly/
+│ └── circular/
+│
+├── 08_Stack/
+│ ├── stack_array.c
+│ ├── stack_linked_list.c
+│ └── valid_parentheses.c
+│
+├── 09_Queue/
+│ ├── simple_queue.c
+│ ├── circular_queue.c
+│ └── deque.c
+│
+├── 10_Hashing/
+│ ├── frequency_array.c
+│ ├── unordered_map.c
+│ └── subarray_sum.c
+│
+├── 11_Two_Pointers/
+│ ├── pair_sum.c
+│ └── remove_duplicates.c
+│
+├── 12_Sliding_Window/
+│ ├── max_sum_subarray.c
+│ └── longest_k_unique.c
+│
+├── 13_Greedy/
+│ ├── activity_selection.c
+│ └── coin_change.c
+│
+├── 14_Backtracking/
+│ ├── n_queens.c
+│ └── sudoku_solver.c
+│
+├── 15_Trees/
+│ ├── traversal.c
+│ ├── height_of_tree.c
+│ └── lowest_common_ancestor.c
+│
+├── 16_Binary_Search_Tree/
+│ ├── insert_delete.c
+│ └── validate_bst.c
+│
+├── 17_Heap/
+│ ├── min_heap.c
+│ └── kth_largest.c
+│
+├── 18_Graph/
+│ ├── bfs.c
+│ ├── dfs.c
+│ ├── dijkstra.c
+│ └── topological_sort.c
+│
+├── 19_Dynamic_Programming/
+│ ├── fibonacci_dp.c
+│ ├── knapsack.c
+│ ├── lcs.c
+│ └── matrix_chain.c
+│
+├── 20_Trie/
+│ └── implement_trie.c
+│
+├── 21_Bit_Manipulation/
+│ ├── count_set_bits.c
+│ └── power_of_two.c
+│
+├── patterns.md # Common DSA patterns
+├── notes.md # Theory + explanations
+└── README.md
 ---
 
-## 📘 Learning Roadmap
-
-- ✅ Master C++ fundamentals  
-- ✅ Learn DSA concepts step-by-step  
-- 🔄 Solve 500+ DSA problems  
-- 🧠 Build strong problem-solving & logic thinking  
-- 🎯 Prepare for coding interviews  
-
----
-
-## 🧪 Platforms I Practice On
-
-- LeetCode  
-- CodeStudio  
-- GeeksForGeeks  
-- HackerRank  
-
-Practice solutions will be uploaded in the `Online_solve` folder.
-
----
-
-## 🧰 Tech Used
-
-| Tool | Purpose |
-|------|-----------|
-| **C++** | DSA implementation |
-| **VS Code** | Code editor |
-| **Git & GitHub** | Version control + progress tracking |
-
----
-
-## 🧹 Git Rules for Clean Repo
-
-This repo uses `.gitignore` to avoid unnecessary files:
-
+## Why to prefer this repository ?
