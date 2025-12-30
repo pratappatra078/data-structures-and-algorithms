@@ -26,124 +26,169 @@ This repository contins my complete **Data Structure and Algorithm** practice,or
 
 ## 📂 Repository Structure
 
-DSA/
+Data_Structure_Algorithm/
+|
 ├── 00_Basics/
-│ ├── time_complexity.md
-│ ├── space_complexity.md
-│ └── input_output.c
+│   ├── time_complexity.md
+│   ├── space_complexity.md
+│   ├── input_output.cpp
+│   └── stl_deep_dive.cpp          ✨ (Vectors, Sets, Maps, Custom Comparators)
 │
 ├── 01_Mathematics/
-│ ├── count_digits.c
-│ ├── gcd_lcm.c
-│ ├── prime_check.c
-│ └── fast_exponentiation.c
+│   ├── count_digits.cpp
+│   ├── gcd_lcm.cpp
+│   ├── prime_check.cpp
+│   ├── fast_exponentiation.cpp
+│   ├── sieve_of_eratosthenes.cpp  ✨
+│   └── modular_arithmetic.cpp     ✨
 │
 ├── 02_Arrays/
-│ ├── easy/
-│ │ ├── largest_element.c
-│ │ ├── second_largest.c
-│ │ └── reverse_array.c
-│ ├── medium/
-│ │ ├── kadane_algorithm.c
-│ │ └── majority_element.c
-│ └── hard/
-│ └── max_product_subarray.c
+│   ├── easy/
+│   │   ├── largest_element.cpp
+│   │   ├── second_largest.cpp
+│   │   └── reverse_array.cpp
+│   ├── medium/
+│   │   ├── kadane_algorithm.cpp
+│   │   └── majority_element.cpp
+│   └── hard/
+│       ├── max_product_subarray.cpp
+│       ├── next_permutation.cpp       ✨
+│       └── sliding_window_maximum.cpp ✨ (Monotonic Deque)
 │
 ├── 03_Strings/
-│ ├── easy/
-│ │ ├── valid_palindrome.c
-│ │ └── anagram.c
-│ ├── medium/
-│ │ └── longest_substring.c
-│ └── hard/
-│ └── pattern_matching.c
+│   ├── easy/
+│   │   ├── valid_palindrome.cpp
+│   │   └── anagram.cpp
+│   ├── medium/
+│   │   └── longest_substring.cpp
+│   └── advanced/                  ✨
+│       ├── kmp_algorithm.cpp
+│       ├── rabin_karp.cpp
+│       └── longest_palindromic_substring.cpp
 │
 ├── 04_Recursion/
-│ ├── factorial.c
-│ ├── fibonacci.c
-│ └── subset_generation.c
+│   ├── factorial.cpp
+│   ├── fibonacci.cpp
+│   └── subset_generation.cpp
 │
 ├── 05_Searching/
-│ ├── linear_search.c
-│ ├── binary_search.c
-│ └── search_rotated_array.c
+│   ├── linear_search.cpp
+│   ├── binary_search.cpp
+│   └── search_rotated_array.cpp
 │
 ├── 06_Sorting/
-│ ├── bubble_sort.c
-│ ├── insertion_sort.c
-│ ├── merge_sort.c
-│ └── quick_sort.c
+│   ├── bubble_sort.cpp
+│   ├── insertion_sort.cpp
+│   ├── merge_sort.cpp
+│   └── quick_sort.cpp
 │
 ├── 07_Linked_List/
-│ ├── singly/
-│ ├── doubly/
-│ └── circular/
+│   ├── singly/
+│   ├── doubly/
+│   └── circular/
 │
-├── 08_Stack/
-│ ├── stack_array.c
-│ ├── stack_linked_list.c
-│ └── valid_parentheses.c
-│
-├── 09_Queue/
-│ ├── simple_queue.c
-│ ├── circular_queue.c
-│ └── deque.c
+├── 08_Stack_Queue/
+│   ├── stack_array.cpp
+│   ├── stack_linked_list.cpp
+│   ├── valid_parentheses.cpp
+│   ├── simple_queue.cpp
+│   ├── circular_queue.cpp
+│   ├── deque.cpp
+│   └── monotonic_stack/           ✨
+│       ├── largest_rectangle_histogram.cpp
+│       └── trapping_rain_water.cpp
 │
 ├── 10_Hashing/
-│ ├── frequency_array.c
-│ ├── unordered_map.c
-│ └── subarray_sum.c
+│   ├── frequency_array.cpp
+│   ├── unordered_map.cpp
+│   └── subarray_sum.cpp
 │
 ├── 11_Two_Pointers/
-│ ├── pair_sum.c
-│ └── remove_duplicates.c
+│   ├── pair_sum.cpp
+│   └── remove_duplicates.cpp
 │
 ├── 12_Sliding_Window/
-│ ├── max_sum_subarray.c
-│ └── longest_k_unique.c
+│   ├── max_sum_subarray.cpp
+│   └── longest_k_unique.cpp
 │
-├── 13_Greedy/
-│ ├── activity_selection.c
-│ └── coin_change.c
+├── 13_Greedy_Basics/
+│   ├── activity_selection.cpp
+│   └── coin_change.cpp
 │
 ├── 14_Backtracking/
-│ ├── n_queens.c
-│ └── sudoku_solver.c
+│   ├── n_queens.cpp
+│   └── sudoku_solver.cpp
 │
-├── 15_Trees/
-│ ├── traversal.c
-│ ├── height_of_tree.c
-│ └── lowest_common_ancestor.c
+├── 15_Trees_BST/
+│   ├── traversal.cpp
+│   ├── height_of_tree.cpp
+│   ├── lowest_common_ancestor.cpp
+│   ├── insert_delete_bst.cpp
+│   ├── validate_bst.cpp
+│   ├── serialization.cpp          ✨
+│   └── views/                     ✨
+│       ├── top_view.cpp
+│       ├── bottom_view.cpp
+│       ├── left_view.cpp
+│       └── right_view.cpp
 │
-├── 16_Binary_Search_Tree/
-│ ├── insert_delete.c
-│ └── validate_bst.c
+├── 17_Heap_PriorityQueue/
+│   ├── min_heap.cpp
+│   ├── kth_largest.cpp
+│   └── median_data_stream.cpp     ✨
 │
-├── 17_Heap/
-│ ├── min_heap.c
-│ └── kth_largest.c
+├── 18_Graph_Advanced/             ✨
+│   ├── bfs.cpp
+│   ├── dfs.cpp
+│   ├── dijkstra.cpp
+│   ├── topological_sort.cpp
+│   ├── dsu/                       ✨
+│   │   ├── union_find.cpp
+│   │   └── kruskal_mst.cpp
+│   ├── shortest_paths/            ✨
+│   │   ├── bellman_ford.cpp
+│   │   └── floyd_warshall.cpp
+│   └── hard/                      ✨
+│       ├── bridges_articulation_points.cpp
+│       ├── alien_dictionary.cpp
+│       └── kosaraju_scc.cpp
 │
-├── 18_Graph/
-│ ├── bfs.c
-│ ├── dfs.c
-│ ├── dijkstra.c
-│ └── topological_sort.c
-│
-├── 19_Dynamic_Programming/
-│ ├── fibonacci_dp.c
-│ ├── knapsack.c
-│ ├── lcs.c
-│ └── matrix_chain.c
+├── 19_Dynamic_Programming_Advanced/
+│   ├── basics/
+│   │   ├── fibonacci_dp.cpp
+│   │   ├── knapsack.cpp
+│   │   ├── lcs.cpp
+│   │   └── matrix_chain.cpp
+│   ├── dp_on_stocks/              ✨
+│   │   ├── buy_sell_1.cpp
+│   │   ├── buy_sell_2.cpp
+│   │   ├── buy_sell_3.cpp
+│   │   ├── buy_sell_4.cpp
+│   │   ├── with_cooldown.cpp
+│   │   └── with_transaction_fee.cpp
+│   ├── dp_on_strings/             ✨
+│   │   ├── edit_distance.cpp
+│   │   └── distinct_subsequences.cpp
+│   └── dp_with_bitmask/           ✨
+│       └── tsp_basics.cpp
 │
 ├── 20_Trie/
-│ └── implement_trie.c
+│   └── implement_trie.cpp
 │
 ├── 21_Bit_Manipulation/
-│ ├── count_set_bits.c
-│ └── power_of_two.c
+│   ├── count_set_bits.cpp
+│   └── power_of_two.cpp
 │
-├── patterns.md # Common DSA patterns
-├── notes.md # Theory + explanations
+├── 22_Range_Queries/              ✨
+│   ├── segment_tree.cpp
+│   └── fenwick_tree.cpp
+│
+├── 23_Greedy_Advanced/            ✨
+│   ├── job_sequencing.cpp
+│   └── huffman_coding.cpp
+│
+├── patterns.md
+├── notes.md
 └── README.md
 ---
 
