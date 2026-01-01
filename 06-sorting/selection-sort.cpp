@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 /*
 selection sort -> select small element from rest of the array and swap
@@ -8,11 +11,11 @@ Space complexity: O(1)
 void selection_sort(vector<int> &arr){
     //calculate length of array
     int n = arr.size();
-    for (int i = 0; i < arr.size() - 1; i++){
+    for (int i = 0; i < n - 1; i++){
         // found minimum from rest of the array
         int min_idx = i;
-        for (int j = i + 1; j < arr.size(); j++){
-            // when ever found small save the index
+        for (int j = i + 1; j < n; j++){
+            // when ever found a small value save its index
             if (arr[min_idx] > arr[j]){
                 min_idx = j;
             }
