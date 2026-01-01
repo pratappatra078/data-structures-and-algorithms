@@ -4,6 +4,12 @@ This file contains **core patterns** used to solve most DSA problems.
 If a problem feels hard, it usually belongs to one of these patterns.
 
 ---
+## Sorting 
+### selection sort
+- “Selection sort always does O(n²) comparisons, but with a guard condition it can reduce swaps. My implementation is try to avoids unnecessary swaps while preserving correctness.”
+
+### bubble sort
+- bubble sort -> check adjacent elements if wrong order then swap
 
 ## 1. Brute Force → Optimized
 **Idea:** Start simple, then reduce time/space.
